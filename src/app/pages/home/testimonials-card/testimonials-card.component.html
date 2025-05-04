@@ -1,0 +1,39 @@
+<div class="testimonial">
+    <div class="testimonial-section">
+      <h2>Our Clients <span>Say</span></h2>
+      <p class="description">
+        Here’s what some of our happy clients have to say about us...
+      </p>
+  
+      <div class="testimonial-content">
+        <!-- Left profile image -->
+        <div class="image-wrapper">
+          <img [src]="testimonials[currentIndex].leftImage" class="main-image" />
+        </div>
+  
+        <!-- Center quote -->
+        <div class="quote-box">
+          <h3>{{ testimonials[currentIndex].name }}</h3>
+          <p class="title">{{ testimonials[currentIndex].title }}</p>
+          <p class="message">{{ testimonials[currentIndex].message }}</p>
+        </div>
+  
+        <!-- Right thumbnails -->
+        <div class="navigation">
+          <button (click)="prev()"><mat-icon>arrow_back_ios</mat-icon></button>
+          <button (click)="next()"><mat-icon>arrow_forward_ios</mat-icon></button>
+        </div>
+  
+        <!-- <div class="thumbnails">
+                <img
+                  *ngFor="let testimonial of testimonials; let i = index"
+                  #thumbRefss
+                  [src]="testimonial.thumbnail"
+                  [class.active]="i === currentIndex"
+                  class="thumb"
+                  (click)="setIndex(i)"
+                />
+              </div> -->
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,89 @@
+<section class="banner" [title]="UserData?.fullName ? UserData?.fullName : 'Satendra Rajput'">
+
+    @defer (on viewport) {
+    <div class="text-container">
+        <h1>Hi, It's Me <span class="highlight">And I'm an experienced</span></h1>
+        <h2 class="typing-text">Software Engineer...</h2>
+        <h2 class="sub-heading">
+            Full-Stack Developer | 3.1 Years Experience in Angular | 7 Months in Java & Spring Boot
+        </h2>
+        <p class="desc">
+            Passionate about building scalable frontend apps, clean backend logic, and reusable components.
+            Currently working in SaaS & Fintech domains — crafting performance-driven solutions with Angular & Java.
+        </p>
+        <a href="/about_page/" target="_blank">
+            <button class="btn_secondary">More About Me</button>
+        </a>
+    </div>
+    } @placeholder {
+    <div>Loading...</div>
+    }
+
+    @defer (on viewport) {
+    <div class="image-container">
+        <img src="/assets/images/global/satendra_1.jpeg" alt="Satendra Rajput" />
+    </div>
+    }@placeholder {
+    <div>Loading...</div>
+    }
+</section>
+
+
+<div class="stats-section">
+    <div class="stat-box">
+      <h2><span class="highlight">96%</span> Client Satisfaction</h2>
+      <p>Delivering Reliable & Scalable Solutions That Clients Trust.</p>
+    </div>
+  
+    <div class="stat-box">
+      <h2><span class="highlight">+3</span> Years Of Experience</h2>
+      <p>Specialized In Angular & Java With A Strong Focus On Full-Stack Development.</p>
+    </div>
+  
+    <div class="stat-box">
+      <h2><span class="highlight">+300</span> Deliverables</h2>
+      <p>Successfully Deployed UI Components & APIs For Various Domains.</p>
+    </div>
+  
+    <div class="stat-box">
+      <h2><span class="highlight">24/7</span> Support Available</h2>
+      <p>Committed To Providing Continuous Assistance And Timely Project Updates.</p>
+    </div>
+  </div>
+  
+  
+
+
+<div class="scroll-content">
+    <marquee behavior="alternate" width="100%" margin="auto">
+        <div class="scroll-content">
+            <div class="classyoutube"><img src="/assets/icons/web/html.svg" alt="HTML">
+                <p>HTML</p>
+            </div>
+            <div class="classdigital"><img src="/assets/icons/web/css.svg" alt="CSS">
+                <p>CSS</p>
+            </div>
+            <div class="classspeaker"><img src="/assets/icons/web/javascript.svg" alt="JavaScript">
+                <p>JavaScript</p>
+            </div>
+            <div class="classfront"><img src="/assets/icons/web/typescript.svg" alt="TypeScript">
+                <p>TypeScript</p>
+            </div>
+            <div class="classyoutube"><img src="/assets/images/global/icons/angular.svg" alt="YouTube">
+                <p>Angular</p>
+            </div>
+
+            <div class="classspeaker"><img src="/assets/images/global/icons/java.svg" alt="java">
+                <p>Java</p>
+            </div>
+
+            <div class="classdigital"><img src="/assets/images/global/icons/spring-boot.svg" alt="spring-boot">
+                <p>Spring Boot</p>
+            </div>
+
+            <div class="classspeaker"><img src="/assets/images/global/icons/mysql.svg" alt="MySQL">
+                <p>MySQL</p>
+            </div>
+        </div>
+    </marquee>
+</div>

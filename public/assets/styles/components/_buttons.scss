@@ -36,7 +36,7 @@
 
 .btn_primary {
   padding: 0.5rem 1.2rem;
-  background-color: var(--secondary-background);
+  background-color:#50bfff !important;
   color: var(--text-color);
   border: none;
   border-radius: 5px;
@@ -56,8 +56,8 @@
 
 .btn_secondary {
   padding: 0.5rem 1.2rem;
-  background-color: var(--secondary-background);
-  color: var(--text-color);
+  background-color: #50bfff !important;
+  color: #111;
   border: none;
   border-radius: 25px;
   transition: 0.3s all ease-in;

@@ -1,0 +1,85 @@
+<footer class="footer"  [title]="UserData?.fullName ? UserData?.fullName : 'Satendra Rajput'">
+    <!-- Top: Left (Video), Center (Logo + Description), Right (Map) -->
+    <div class="footer-top">
+      <div class="footer-container">
+        <!-- CENTER: Logo Section -->
+        <div class="logo-section">
+          <img src="/assets/images/global/logo.png" alt="Logo" class="footer-logo" />
+          <h2 class="site-name">Satendra Rajput</h2>
+          <p class="description">
+            Passionate about building scalable frontend apps, clean backend logic, and reusable components. Currently working in SaaS & Fintech domains — crafting performance-driven solutions with Angular & Java.
+          </p>
+  
+          <!-- Middle: Social Media -->
+          <div class="footer-middle">
+            <div class="social-media">
+              <i class="fa-brands fa-linkedin">
+                <a href="https://www.linkedin.com/in/satendracoder/" target="_blank">
+                  <img src="assets/icons/social/linkedin.svg" alt="" width="30px" height="30px" />
+                </a>
+              </i>
+              <i class="fa-brands fa-youtube">
+                <a href="https://github.com/satendracoder" target="_blank">
+                  <img src="assets/icons/social/github.svg" alt="" width="26px" height="26px" />
+                </a>
+              </i>
+              <i class="fa-brands fa-facebook-f">
+                <a href="https://www.facebook.com/satendracoder" target="_blank">
+                  <img src="assets/icons/social/facebook.svg" alt="" width="30px" height="30px" />
+                </a>
+              </i>
+              <i class="fa-brands fa-instagram">
+                <a href="https://www.instagram.com/satendracoder/" target="_blank">
+                  <img src="assets/icons/social/instagram.svg" alt="" width="30px" height="30px" />
+                </a>
+              </i>
+              <i class="fa-brands fa-twitter">
+                <a href="https://twitter.com/satendracoder" target="_blank">
+                  <img src="assets/icons/social/twitter.svg" alt="" width="28px" height="28px"
+                    style="background-color: aliceblue; border-radius: 50px" />
+                </a>
+              </i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Bottom: Copyright -->
+    <div class="footer-bottom">
+      <p>&copy; 2025. SR. Don't hesitate to reach out..</p>
+      <div class="policies">
+        <a routerLink="/company/terms-and-conditions">Professional Skills</a>
+        <a routerLink="/company/privacy-policy">Projects</a>
+        <a routerLink="/company/pricing-policy">Testimonials</a>
+        <a routerLink="/company/about-us">About</a>
+      </div>
+    </div>
+  
+  </footer>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- Fixed Buttons -->
+  <div class="fixed-button">
+    <div class="theme-button" target="_blank" (click)="isDarkModeMethod()">
+      @if (!isDarkTheme) {
+      <mat-icon class="toggle-icon">wb_sunny</mat-icon>
+      }@else {
+      <mat-icon class="toggle-icon">nights_stay</mat-icon>
+      }
+    </div>
+  </div>

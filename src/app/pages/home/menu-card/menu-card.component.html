@@ -1,0 +1,44 @@
+<nav>
+    <div class="wrapper" [title]="UserData?.fullName ? UserData?.fullName : 'Satendra Rajput'">
+      <div class="logo">
+        <a href="/">
+          <h2>
+          Satendra-Rajput
+          </h2>
+        </a>
+      </div>
+  
+      <input type="radio" name="slider" id="menu-btn" />
+      <input type="radio" name="slider" id="close-btn" />
+  
+      <ul class="nav-links">
+        <label for="close-btn" class="btn close-btn">
+          <h2>
+            <img src="/assets/images/global/satendralogo.svg" alt="" />
+          </h2>
+          <i><mat-icon (click)="mobileclose()">close</mat-icon></i>
+        </label>
+  
+        <li><a href="">Home</a></li>
+        <li><a routerLink="#skills">Professional Skills</a></li>
+        <li><a routerLink="#projects">Projects</a></li>
+        <li><a routerLink="#testimonials">Testimonials</a></li>
+        <li><a routerLink="#friends">Meet My Friends</a></li>
+        <li><a routerLink="#about">About</a></li>
+        <li><a (click)="talkToMe()" target="_blank" class="loginbtn">Reach out me</a></li>
+      </ul>
+  
+      <label (click)="mobileClick()" for="menu-btn" class="btnclose menu-btn">
+        @if (!isMobileVisible) {
+        <i><mat-icon>
+            <svg viewBox="64 64 896 896" focusable="false" fill="currentColor" width="1em" height="1em">
+              <path
+                d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 000 13.8z">
+              </path>
+            </svg> </mat-icon></i>
+        } @else{
+        <!-- <app-dropdown-user *ngIf="isLoggedIn"></app-dropdown-user> -->
+        }
+      </label>
+    </div>
+  </nav>
