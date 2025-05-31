@@ -1,23 +1,25 @@
 <div class="skills-container" id="Professional">
 
-    <div class="skills-heading">
-      <h1><span>Professional <strong>Skills</strong></span> </h1>
-      <p>Skilled in HTML, CSS, JavaScript, and TypeScript, with expertise in Angular for building dynamic front-end
-        applications. Proficient in Java, Spring Boot, Node.js, and Express for backend development..</p>
-    </div>
-  
-    <div class="skills-row">
-      <div class="skills">
-  
-        <div *ngFor="let skill of skills" class="iconsImage" [class.active]="selectedSkill.name === skill.name"
-        (click)="onSkillClick(skill)">
+  <div class="skills-heading">
+    <h1><span>Professional <strong>Skills</strong></span> </h1>
+    <p>Skilled in HTML, CSS, JavaScript, and TypeScript, with expertise in Angular for building dynamic front-end
+    applications. Proficient in Java, Spring Boot, Node.js, and Express for backend development..</p>
+  </div>
+
+  <div class="skills-row">
+    <div class="skills">
+
+      @for (skill of skills; track skill) {
+        <div class="iconsImage" [class.active]="selectedSkill.name === skill.name"
+          (click)="onSkillClick(skill)">
           <img [src]="skill.image" [alt]="skill.name">
         </div>
-      </div>
-      <div class="skills-content">
-        <h2>{{ selectedSkill?.name || 'Skill Details' }}</h2>
-        <p>{{ selectedSkill?.description || 'Select a skill from the left to see details here.' }}</p>
-      </div>
+      }
     </div>
-  
+    <div class="skills-content">
+      <h2>{{ selectedSkill?.name || 'Skill Details' }}</h2>
+      <p>{{ selectedSkill?.description || 'Select a skill from the left to see details here.' }}</p>
+    </div>
   </div>
+
+</div>

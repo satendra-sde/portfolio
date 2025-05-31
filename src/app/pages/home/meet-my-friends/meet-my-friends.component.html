@@ -1,28 +1,33 @@
 <div class="team-section"#teamSection>
-    <h2>Meet My <span>Friends</span></h2>
-    <p class="subtitle">
-      At this part, you can see a few of the amazing friends I have worked with and shared great memories.
-    </p>
-  
-    <div class="carousel-wrapper">
-        <button class="nav left" *ngIf="!atStart" (click)="scrollLeft()">
-            <mat-icon>chevron_left</mat-icon>
-        </button>
-        
-        <div class="carousel" #carousel (scroll)="onScroll()">
-          <div class="team-card" *ngFor="let friend of friendsList">
-            <img [src]="friend.image" alt="{{ friend.name }}" />
-            <h3>{{ friend.name }}</h3>
-            <p class="role">{{ friend.description }}</p>
-            <a [href]="friend.link" target="_blank">Know More →</a>
-            <span [ngStyle]="{ 'background-color': friend.color}">{{friend.company}}</span>
-          </div>
+  <h2>Meet My <span>Friends</span></h2>
+  <p class="subtitle">
+    At this part, you can see a few of the amazing friends I have worked with and shared great memories.
+  </p>
+
+  <div class="carousel-wrapper">
+    @if (!atStart) {
+      <button class="nav left" (click)="scrollLeft()">
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+    }
+
+    <div class="carousel" #carousel (scroll)="onScroll()">
+      @for (friend of friendsList; track friend) {
+        <div class="team-card">
+          <img [src]="friend.image" alt="{{ friend.name }}" />
+          <h3>{{ friend.name }}</h3>
+          <p class="role">{{ friend.description }}</p>
+          <a [href]="friend.link" target="_blank">Know More →</a>
+          <span [ngStyle]="{ 'background-color': friend.color}">{{friend.company}}</span>
         </div>
-        
-        <button class="nav right" *ngIf="!atEnd" (click)="scrollRight()">
-            <mat-icon>chevron_right</mat-icon>
-        </button>
-      </div>
-    <!-- <button class="view-all">View All Friends →</button> -->
+      }
+    </div>
+
+    @if (!atEnd) {
+      <button class="nav right" (click)="scrollRight()">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    }
   </div>
-  
+  <!-- <button class="view-all">View All Friends →</button> -->
+</div>
